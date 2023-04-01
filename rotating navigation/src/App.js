@@ -1,14 +1,19 @@
+import {useState} from 'react'
 
 function App() {
+  const [openNav, setOpenNav] = useState('container')
+  const handleClick = () => {
+    openNav === 'container' ? setOpenNav('container show-nav') : setOpenNav('container')
+  }
   return (
     <div className="App">
-      <div className="container">
+      <div className={openNav}>
         <div className="circle-container">
           <div className="circle">
-            <button id="close">
+            <button id="close"  onClick={handleClick}>
               <i className="fas fa-times"></i>
             </button>
-            <button id="open">
+            <button id="open"  onClick={handleClick}>
               <i className="fas fa-bars"></i>
             </button>
           </div>
