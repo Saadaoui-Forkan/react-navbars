@@ -1,0 +1,86 @@
+
+.App-logo{
+  width: 70px;
+}
+.App-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px;
+  border: 5px solid blue;
+
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navUl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.navUl li{
+  font-weight: bold;
+  color: blue;
+  margin: auto 15px;
+}
+.bars{
+  display: none;
+  transition: 0.3 ease-in;
+}
+.line {
+  background-color: blue;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto 6px auto;
+}
+@media (max-width:768px){
+  .bars{
+    display: block;
+    margin-right: 20px;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .navUl{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    border: 2px solid blue;
+    top: 35px;
+    right: 7px;
+    transform: translateX(190%);
+    transition: 0.7s ease-in;
+  }
+  .nav ul li {
+    font-weight: bold;
+    color: blue;
+    margin: 5px auto;
+    padding: auto;
+    transform: translateX(-50%);
+  }
+}
+
+.active{
+  transform: translateX(0);
+  transition: 0.3 ease-in;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.navbar-toggler:focus {
+  border: none;
+}
